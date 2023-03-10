@@ -5,11 +5,29 @@ class Timer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { seconds: this.props.start};
+    this.state = { 
+      minutes: 0,
+      seconds: this.props.start
+      };
+  }
+
+  convert(){
+    if(this.state.seconds > 59){
+      this.state = {
+        minutes: this.state.seconds / 60,
+        seconds: this.state.seconds - this.state.minutes
+      }
+    }
   }
 
   tick() {
     this.setState(state => ({seconds: state.seconds + 1}));
+    if(this.state.seconds == 59){
+      this.setState(state => ({
+        minutes: state.minutes + 1,
+        seconds: 0
+      }));
+    }
   }
 
   componentDidMount(){
@@ -25,7 +43,7 @@ class Timer extends React.Component {
     <>
       <div className="bg-azulEscuro flex flex-col items-center w-1/2 m-auto rounded-xl mt-5 mb-5 border-4 border-blue-800">
       <h1 className="text-white text-9xl cronometro">
-        Timer {this.state.seconds}
+        {this.state.minutes.toString().padStart(2, '0')}:{this.state.seconds.toString().padStart(2, '0')}
       </h1>
     </div>
       <div className="flex flex-row justify-center gap-5">
@@ -45,7 +63,9 @@ class Timer extends React.Component {
         <button
         onClick={() => {
           this.setState(
-            state => ({seconds: 0})
+            state => ({
+              minutes: 0,
+              seconds: 0})
           );
           clearInterval(this.interval);
         }}

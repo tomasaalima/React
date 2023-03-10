@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Alarm Clock';
   src: url('../public/fonts/alarmClock.ttf');
 }
 
 .cronometro {
-  font-family: 'EB garamond';
+  font-family: 'Alarm Clock';
 }
