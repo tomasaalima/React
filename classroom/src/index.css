@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'EB Garamond', serif;
+  src: url('../public/fonts/alarmClock.ttf');
+}
+
+.cronometro {
+  font-family: 'EB garamond';
+}
