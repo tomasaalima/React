@@ -1,8 +1,14 @@
 import React from 'react';
 import Timer from '../components/ExempleOne';
+import Menu from '../components/Menu';
 
 function HomePage() {
-  return <Timer start={0} ms={1000} />;
+  return (
+    <>
+      <Menu />
+      <Timer start={0} ms={1000} />
+    </>
+  );
 }
 
 export default HomePage;

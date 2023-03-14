@@ -22,11 +22,10 @@ class Timer extends React.Component {
 
   convert() {
     const { seconds } = this.state;
-    const { minutes } = this.state;
     if (seconds > 59) {
       this.state = {
         minutes: (seconds / 60).toFixed(0),
-        seconds: seconds - (minutes * 60),
+        seconds: seconds - ((seconds / 60).toFixed(0) * 60),
       };
     }
   }

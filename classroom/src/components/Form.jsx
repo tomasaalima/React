@@ -8,15 +8,15 @@ function Form() {
         type="text"
         id="mail"
         name="mail"
-        value="E-mail"
+        placeholder="E-mail"
 
       />
       <input
         className="bg-white text-gray-400 w-96 rounded-b-md border border-t-0 border-gray-400 p-2"
-        type="text"
+        type="password"
         id="passwd"
         name="passwd"
-        value="Senha"
+        placeholder="Senha"
 
       />
       <h2
@@ -25,7 +25,7 @@ function Form() {
         Esqueceu sua senha?
       </h2>
       <button
-        className="bg-blue-700 text-white w-96 rounded-md"
+        className="bg-blue-700 p-1 text-white w-96 rounded-md"
         type="button"
       >
         Entrar
