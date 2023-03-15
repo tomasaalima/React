@@ -46,24 +46,26 @@ class Timer extends React.Component {
     const { minutes } = this.state;
     const { ms } = this.props;
     return (
-      <>
-        <div className="bg-azulEscuro flex flex-col items-center w-1/2 m-auto rounded-xl mt-5 mb-5 border-4 border-blue-800">
+      <div
+        className="flex flex-col grow justify-center items-center"
+      >
+        <div className="bg-gray-800 flex flex-col items-center w-1/2 rounded-t-xl">
           <h1 className="text-white text-9xl cronometro">
             {minutes.toString().padStart(2, '0')}
             :
             {seconds.toString().padStart(2, '0')}
           </h1>
         </div>
-        <div className="flex flex-row justify-center gap-5">
+        <div className="flex flex-row justify-center w-1/2">
           <button
             type="button"
+            className="bg-gray-700 text-white p-3 rounded-l-xl rounded-t-none w-1/2"
             onClick={() => {
               if (this.interval) {
                 clearInterval(this.interval);
                 this.interval = null;
               } else { this.interval = setInterval(() => this.tick(), ms); }
             }}
-            className="bg-black text-white p-3 rounded-xl"
           >
             Iniciar | Parar
           </button>
@@ -78,12 +80,12 @@ class Timer extends React.Component {
               );
               clearInterval(this.interval);
             }}
-            className="bg-red-700 text-white p-3 rounded-xl"
+            className="bg-red-700 text-white p-3 rounded-b-xl rounded-t-none rounded-l-none w-1/2"
           >
             Zerar
           </button>
         </div>
-      </>
+      </div>
     );
   }
 }
