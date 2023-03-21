@@ -26,11 +26,9 @@ function Card(props) {
       if (combination[0] === img && combination[1] === img && flipped === 1) {
         newClass = 'border-green-500';
       } else if (combination[0] === img && combination[1] !== img && flipped === 1) {
-        newClass = 'border-red-500';
-        setFlipped(-1);
+        setTimeout(() => { setFlipped(-1); }, 1000);
       } else if (combination[0] !== img && combination[1] === img && flipped === 1) {
-        newClass = 'border-red-500';
-        setFlipped(-1);
+        setTimeout(() => { setFlipped(-1); }, 1000);
       }
     }
 

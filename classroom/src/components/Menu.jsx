@@ -41,6 +41,14 @@ function Menu() {
             Memory
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/forms"
+            className="hover:underline text-white"
+          >
+            Forms
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
