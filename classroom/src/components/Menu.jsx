@@ -11,7 +11,7 @@ function Menu() {
       >
         <li>
           <NavLink
-            to="/Login"
+            to="/login"
             className="hover:underline text-white"
           >
             Login
@@ -31,6 +31,14 @@ function Menu() {
             className="hover:underline text-white"
           >
             Attributes
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/memory"
+            className="hover:underline text-white"
+          >
+            Memory
           </NavLink>
         </li>
       </ul>
